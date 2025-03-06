@@ -1,10 +1,10 @@
 interface IHeadingProps {
-  headingText:string,
-  headingType:"h1"|"h2"|"h3"|"h4"|"h5"|"h6";
+  headingType: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  headingText: string;
 }
 
-export const Heading = ({headingType, headingText}: IHeadingProps) => {
-  const renderHeading= () => {
+export const Heading = ({ headingType, headingText }: IHeadingProps) => {
+  const renderHeading = () => {
     switch (headingType) {
       case "h1":
         return <h1>{headingText}</h1>;
@@ -18,11 +18,9 @@ export const Heading = ({headingType, headingText}: IHeadingProps) => {
         return <h5>{headingText}</h5>;
       case "h6":
         return <h6>{headingText}</h6>;
-      
-      default: 
-        return <h1>{headingText}</h1>
+      default:
+        return <h1>{headingText}</h1>;
     }
   };
   return renderHeading();
-}
-
+};

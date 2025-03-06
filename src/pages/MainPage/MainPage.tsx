@@ -1,7 +1,7 @@
-import "./MainPage.scss";
-import { WhatsNew } from "../../components/WhatsNew/WhatsNew";
-import { Header } from "../../components/UI/Header/Header";
 import { History } from "../../components/History/History";
+import { Header } from "../../components/UI/Header/Header";
+import { WhatsNews } from "../../components/WhatsNews/WhatsNews";
+import "./MainPage.scss";
 
 export const MainPage = () => {
   return (
@@ -238,7 +238,7 @@ export const MainPage = () => {
         </div>
       </aside>
       <main className="Main">
-        <WhatsNew />
+        <WhatsNews/>
         <History/>
         <div className="Post _liked _marked">
           <div className="UserElem">

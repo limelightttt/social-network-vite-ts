@@ -1,7 +1,9 @@
+import { SAppButton } from "./AppButton.style";
+
 interface IAppButtonProps {
   buttonText: string;
-  isDisabled: boolean;
   buttonClick?: () => void;
+  isDisabled: boolean;
 }
 
 export const AppButton = ({
@@ -10,8 +12,8 @@ export const AppButton = ({
   isDisabled,
 }: IAppButtonProps) => {
   return (
-    <button disabled={isDisabled} onClick={buttonClick}>
+    <SAppButton disabled={isDisabled} onClick={buttonClick}>
       {buttonText}
-    </button>
+    </SAppButton>
   );
 };

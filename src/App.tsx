@@ -1,13 +1,8 @@
-import { MainPage } from "./pages/MainPage/MainPage";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { MainPage } from "./pages/MainPage/MainPage";
 import { ProfilePage } from "./pages/ProfilePage/ProfilePage";
-import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-
-
-
-
+import { RegistrationPage } from "./pages/RegistrationPage/RegistrationPage";
 
 function App() {
   return (
@@ -15,12 +10,12 @@ function App() {
       <div className="App">
         <div className="container">
           <BrowserRouter>
-          <Routes>
-            <Route element={<LoginPage/>} path="/"/>
-            <Route element={<MainPage/>} path="/main-page"/>
-            <Route element={<ProfilePage/>} path="/profile-page"/>
-            <Route element={<RegistrationPage/>} path="registration-page"/>
-          </Routes>
+            <Routes>
+              <Route element={<LoginPage/>} path="/"/>
+              <Route element={<MainPage/>} path="/main-page"/>
+              <Route element={<ProfilePage/>} path="/profile-page"/>
+              <Route element={<RegistrationPage/>} path="/registration-page"/>
+            </Routes>
           </BrowserRouter>
         </div>
       </div>
@@ -28,8 +23,4 @@ function App() {
   );
 }
 
-
-
 export default App;
-
-
